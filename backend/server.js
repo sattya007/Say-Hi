@@ -6,7 +6,7 @@ const server=http.Server(app);//sob kichu server er moddhe niye nilam...ekhon ek
 const socket =require("socket.io");//socket server banate socket nite hobe 
 const io=socket(server);// http r socket co-exist korche same port number e
 
-server.listen(3000,()=>{//server listen korbe 3000 number port e
+server.listen(process.env.PORT||3000,()=>{//server listen korbe 3000 number port e
     console.log("run hoche");
 });
 
